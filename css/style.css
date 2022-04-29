@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 COLORS
 
@@ -72,3 +73,14 @@ body {
 .hotel-view {
   background-color: white;
   flex: 1; }
+
+.logo {
+  height: 3.25rem; }
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__avatar {
+  height: 3.75rem;
+  border-radius: 50%Î; }

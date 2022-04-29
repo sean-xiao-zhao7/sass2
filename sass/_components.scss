@@ -1,0 +1,34 @@
+// Logo
+.logo {
+    height: 3.25rem;
+}
+
+// Top search 
+.search {
+    &__input {}
+
+    &__button {}
+
+    &__icon {}
+}
+
+// User nav
+.user-nav {
+    &__icon-container {}
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    &__notification {}
+
+    &__account {}
+
+    &__avatar {
+        height: 3.75rem;
+        border-radius: 50%Î;
+    }
+
+    &__username {}
+}
