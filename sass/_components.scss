@@ -60,7 +60,7 @@
         padding: 0 2rem;
         cursor: pointer;
         height: 100%;
-        transition: background-color .1s;
+        transition: background-color .08s;
     }
 
     &>*:hover {
@@ -108,5 +108,76 @@
 
     &__username {
         font-size: 1.2rem;
+    }
+}
+
+// Side bar
+
+.sidebar {
+    font-size: 1.5rem;
+    list-style: none;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    &__nav {}
+
+    &__nav-item {
+        position: relative;
+
+        &--link:link,
+        &--link:visited {
+            text-decoration: none;
+            color: var(--color-grey-light-1);
+            display: block;
+            padding: 1.5rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 10;
+            position: relative;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: var(--color-primary);
+            transform: scaleY(0);
+            transition: transform 0.1s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s;
+            transform-origin: bottom;
+        }
+
+        &:hover::before,
+        &--active::before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        &:active::before {
+            background-color: var(--color-primary-light);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: currentColor;
+        margin-right: 2rem;
+    }
+
+    .legal {
+        font-size: 1.2rem;
+        padding: 2.5rem;
+        text-align: center;
+        color: var(--color-grey-dark-3);
+        align-self: flex-end;
     }
 }
