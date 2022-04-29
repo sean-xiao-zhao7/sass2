@@ -4,6 +4,8 @@
     background-color: var(--color-grey-light-1);
     box-shadow: $box-shadow-light;
     min-height: 50rem;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 .header {
