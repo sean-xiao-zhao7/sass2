@@ -1,15 +1,52 @@
 // Logo
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 // Top search 
 .search {
-    &__input {}
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &__button {}
+    &__input {
+        font-family: inherit;
+        font-size: 1.3rem;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        color: inherit;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: width 0.2s;
+        margin-right: -3.5rem;
 
-    &__icon {}
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+    }
+
+    &__button {
+        border: none;
+        display: flex;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
 }
 
 // User nav
