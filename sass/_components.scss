@@ -1,3 +1,30 @@
+// Shared components
+
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        color: var(--color-grey-dark-1)
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
 // Logo
 .logo {
     height: 3.25rem;
@@ -107,7 +134,9 @@
     }
 
     &__username {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        color: var(--color-grey-dark-1);
+        margin-left: 0.7rem;
     }
 }
 
@@ -119,8 +148,7 @@
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
-
-    &__nav {}
+    justify-content: space-between;
 
     &__nav-item {
         position: relative;
@@ -179,5 +207,152 @@
         text-align: center;
         color: var(--color-grey-dark-3);
         align-self: flex-end;
+    }
+}
+
+// Hotel view
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        display: block;
+        width: 100%;
+    }
+}
+
+.overview {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px var(--color-grey-light-2);
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary)
+    }
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        &>svg {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__rating {
+        background-color: var(--color-primary);
+        margin-left: 3rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.5rem;
+
+        &-average {
+            font-size: 2.25rem;
+        }
+
+        &-count {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Details
+
+.details {
+    display: flex;
+    padding: 4rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: $border-grey;
+
+    &__summary {
+        flex: 0 0 60%;
+        margin-right: 4rem;
+        box-shadow: $box-shadow-light;
+        padding: 3rem;
+        font-size: 1.4rem;
+        border-radius: 3px;
+
+        &>.list {
+            border-top: $border-grey;
+            border-bottom: $border-grey;
+            margin: 2rem 0;
+            padding-top: 2rem;
+            padding-bottom: 1.3rem;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            &>.list-item {
+                flex: 0 0 50%;
+                margin-bottom: .7rem;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    margin-right: .5rem;
+                    // background: url('../img/chevron-thin-right.svg') no-repeat;
+                    // background-size: cover;
+
+                    background-color: var(--color-primary);
+                    -webkit-mask-image: url('../img/chevron-thin-right.svg');
+                    -webkit-mask-size: cover;
+
+                }
+            }
+        }
+
+        &-recommendations {
+            display: flex;
+            font-size: 1.3rem;
+            color: var(--color-grey-dark-3);
+
+            &-people {
+                display: flex;
+
+                &>.avatar {
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: solid 2px white;
+
+                    &:not(:last-child) {
+                        margin-right: -1rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__reviews {
+        flex: 1;
+        box-shadow: $box-shadow-light;
+        padding: 3rem;
+        border-radius: 3px;
     }
 }
