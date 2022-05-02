@@ -331,7 +331,33 @@ body {
           .details__summary-recommendations-people > .avatar:not(:last-child) {
             margin-right: -1rem; }
   .details__reviews {
-    flex: 1;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-    padding: 3rem;
-    border-radius: 3px; }
+    flex: 1; }
+    .details__reviews .review {
+      box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+      padding: 3rem;
+      border-radius: 3px; }
+      .details__reviews .review:not(:last-child) {
+        margin-bottom: 3rem; }
+      .details__reviews .review__text {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem; }
+      .details__reviews .review__user {
+        display: flex;
+        align-items: center; }
+        .details__reviews .review__user-photo {
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%; }
+        .details__reviews .review__user-info {
+          margin-right: auto;
+          margin-left: 1.5rem; }
+          .details__reviews .review__user-info-name {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.2rem; }
+      .details__reviews .review__rating {
+        color: var(--color-primary);
+        font-size: 2.5rem; }
+    .details__reviews .show-all {
+      text-align: center;
+      font-size: 1.5rem; }
