@@ -6,6 +6,12 @@
     min-height: 50rem;
     border-radius: 3px;
     overflow: hidden;
+
+    @media only screen and (max-width: $breakpoint-large) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -19,11 +25,19 @@
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $breakpoint-small) {
+        flex-wrap: wrap;
+    }
 }
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%;
+
+    @media only screen and (max-width: $breakpoint-small) {
+        flex-basis: 100%;
+    }
 }
 
 .hotel-view {
