@@ -361,3 +361,42 @@ body {
     .details__reviews .show-all {
       text-align: center;
       font-size: 1.5rem; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  border: none;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); }
+  .btn > span {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transition: top .2s, transform .2s;
+    display: inline-block;
+    padding: 2rem 7rem; }
+  .btn > .btn__invisible {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    display: flex;
+    align-items: center;
+    font-size: 92%; }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
